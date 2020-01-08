@@ -9,14 +9,14 @@ export default class Navbar extends Component{
         return (
             <div>
                     <NavWrapper className="navbar navbar-expand-sm navbar-dark px-sm-5">
-                           <span> <i className="fas fa-home"/> </span>
+                           <span> <i className=" fas fa-home"/> </span>
 
                             <Link to="/">
                                 <img src={logo} alt="store" className="navbar-brand"/>
                             </Link>
-                            <ul className="navbar-nav align-intems-center">
+                            <ul className="navbar-nav align-intems-center ">
                                 <li className ="nav-item ml-5"></li>  
-                                <Link to ="/" className="nav-Link bg-dark">
+                                <Link to ="/" className="nav-Link text-decoration-none ">
                                     products  
                                 </Link>
                           </ul>
@@ -34,11 +34,16 @@ export default class Navbar extends Component{
     }
 }
 
-const NavWrapper = styled.nav `  
-text-transform: capitalize;
+const NavWrapper = styled.nav`  
+    text-transform: capitalize;
     background: var(--mainBlue);
-    .nav-link{
+    .nav-Link{
         color:var(--mainWhite)!important;
         font-size:1.3rem ;
+    }
+    .nav-Link:hover {
+        color:var(--mainYellow)!important;
+        font-size:1.5rem;
+        transition: all 0.2s linear;
     }
 ` 
